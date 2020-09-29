@@ -3,13 +3,10 @@ import React from "react";
 import Post from "./Post/Post";
 
 
-const MyPosts =() =>{
+const MyPosts =(props) =>{
 
- let postData = [
-     {id:1, massage:'даааа', like:110 },
-     {id:1, massage:'нет', like:0},
-     {id:1, massage:'хз', like:10}
- ]
+let postElements = props.postData
+    .map( p =><Post massage={p.massage} like={p.like}/> )
 
     return(
 <div>
@@ -19,9 +16,7 @@ const MyPosts =() =>{
         <button>Add post</button>
     </div>
     <div className={s.posts}>
-       <Post massage=' даааа ' like={postData[0].like}/>
-        <Post massage=' нет ' like={postData[1].like}/>
-        <Post massage=' хз '  like={postData[2].like}/>
+        {postElements}
 
     </div>
 </div>

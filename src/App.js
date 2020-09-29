@@ -11,17 +11,18 @@ import News from "./components/test/News";
 
 
 
-const App = () =>{
+const App = (props) =>{
   return(
  <BrowserRouter>
       <div className='app-wrapper'>
         <Header/>
         <Nav/>
         <div className='app-content'>
-            <Route path='/dialogs' component={Dialogs}/>
-            <Route path='/profile' component={Profile}/>
-            <Route path='/music'    component={Music}/>
-            <Route path='/News' component={News}/>
+            <Route path='/dialogs' render={ ()=>
+                <Dialogs dialogsData={props.state.dialogsData}
+                         massageData={props.state.massageData}
+                />}/>
+            <Route path='/profile' render={()=><Profile postData={props.state.postData}/>}/>
       </div>
       </div>
  </BrowserRouter>

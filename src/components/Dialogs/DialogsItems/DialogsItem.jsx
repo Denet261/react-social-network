@@ -1,9 +1,9 @@
-import s from "./Dialogs.module.css";
+import s from "./DialogsItem.module.css";
 import React from "react";
 import {NavLink} from "react-router-dom";
 
 
-const DialogsItems = (props) =>{
+const DialogsItem = (props) =>{
     return(
 
             <div className={s.item}>
@@ -13,45 +13,4 @@ const DialogsItems = (props) =>{
     )
 }
 
-const Massages =(props)=>{
-    return(
-
-            <div className={s.message}>{props.massage}</div>
-
-    )
-}
-
-
-const Dialogs =(props) =>{
-
-    let dialogsData = [
-        {id:1, name:'Denis'},
-        {id:2, name:'Dima'},
-        {id:3, name:'Name 1'}
-    ]
-    let massageData = [
-        {id:1, massage:'Привет'},
-        {id:2, massage:'Пока'},
-        {id:3, massage:'Да, да'}
-    ]
-
-    let massageElements = massageData.map( m =><Massages massage={m.massage}/>)
-
-    let dialogsElements = dialogsData.map(d =><DialogsItems id={d.id} name={d.name}/>)
-
-
-    return(
-
-     <div className={s.dialogs}>
-         <div className={s.dialogsitems}>
-             {dialogsElements}
-         </div>
-<div className={s.massages}>
-    {massageElements}
-</div>
-    </div>
-
-)
-}
-
-export default Dialogs;
+export default DialogsItem;
