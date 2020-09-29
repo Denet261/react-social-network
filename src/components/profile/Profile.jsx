@@ -10,7 +10,7 @@ const Profile =()=>{
         <div className={s.content}>
             <ProfileInfo/>
            <MyPosts/>
-        </div>ljhklhl
+        </div>
     )
 }
 
