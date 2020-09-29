@@ -1,0 +1,41 @@
+
+
+.item{
+    color: aqua;
+
+}
+
+
+.posts{
+    background-color: #282c34;
+}
+
+
+.item img{
+    width: 50px;
+}
+
+
+.dialogs{
+    display: grid;
+    grid-template-columns: 2fr 10fr ;
+    padding: 10px;
+}
+
+
+.items{
+color: #282c34;
+}
+.dialogsitems{
+    color: aliceblue;
+
+
+}
+
+.massages{
+ padding: 20px;
+    line-height:3.31;
+}
+
+
+
