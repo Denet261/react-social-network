@@ -4,16 +4,23 @@ import Post from "./Post/Post";
 
 
 const MyPosts =(props) =>{
-
+debugger;
 let postElements = props.postData
     .map( p =><Post massage={p.massage} like={p.like}/> )
+
+    let textElement = React.createRef();
+
+   let buttonClikc = () =>{
+      let text = textElement.current.value
+       alert(text)
+   }
 
     return(
 <div>
     My posts
     <div>
-        <textarea></textarea>
-        <button>Add post</button>
+        <textarea ref={textElement}></textarea>
+        <button onClick={buttonClikc}>Add post</button>
     </div>
     <div className={s.posts}>
         {postElements}

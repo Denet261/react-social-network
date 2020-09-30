@@ -11,9 +11,9 @@ const Dialogs =(props) =>{
 
 
 
-    let massageElement = props.massageData.map( m =><Massages massage={m.massage}/>)
+    let massageElement = props.state.massageData.map( m =><Massages massage={m.massage}/>)
 
-    let dialogsElement = props.dialogsData.map(d =><DialogsItem id={d.id} name={d.name}/>)
+    let dialogsElement = props.state.dialogsData.map(d =><DialogsItem id={d.id} name={d.name}/>)
 
 
 
