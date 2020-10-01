@@ -1,17 +1,13 @@
-import s from "./../Dialogs.module.css";
 import React from "react";
-import {NavLink} from "react-router-dom";
+import s from "./../Dialogs.module.css";
 
 
+const Massages = ({massage}) => {
+    return (
 
-const Massages =(props)=>{
-    return(
-
-            <div className={s.message}>{props.massage}</div>
+        <div className={s.message}>{massage}</div>
 
     )
 }
-
-
 
 export default Massages;

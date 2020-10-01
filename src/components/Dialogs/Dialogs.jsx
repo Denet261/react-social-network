@@ -1,19 +1,18 @@
-import s from "./Dialogs.module.css";
 import React from "react";
-import {NavLink} from "react-router-dom";
+import s from "./Dialogs.module.css";
 import Massages from "./Massage/Massage";
 import DialogsItem from './DialogsItems/DialogsItem'
 
 
 
-const Dialogs =(props) =>{
+const Dialogs =({state}) =>{
 
 
 
 
-    let massageElement = props.state.massageData.map( m =><Massages massage={m.massage}/>)
+    let massageElement = state.massageData.map( m =><Massages massage={m.massage}/>)
 
-    let dialogsElement = props.state.dialogsData.map(d =><DialogsItem id={d.id} name={d.name}/>)
+    let dialogsElement = state.dialogsData.map(d =><DialogsItem id={d.id} name={d.name}/>)
 
 
 

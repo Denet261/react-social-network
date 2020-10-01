@@ -1,14 +1,14 @@
-import s from "./Post.module.css";
 import React from "react";
+import s from "./Post.module.css";
 import { SmileTwoTone, HeartTwoTone, CheckCircleTwoTone } from '@ant-design/icons'
-
+import avaPost from './avaPost.jpg'
 
 const Post =(props) =>{
     return(
  <div>
 
         <div className={s.item}>
-            <img src='https://pm1.narvii.com/6889/74979d4d2744ec6e27995b6e866f091d04c0b40cr1-515-414v2_uhq.jpg'/>
+            <img src={avaPost}/>
             <div>
                 Name:{props.massage}
                 </div>

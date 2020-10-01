@@ -5,11 +5,11 @@ import ProfileInfo from "./profileinfo/ProfileInfo";
 
 
 
-const Profile =(props)=>{
+const Profile =({state})=>{
     return(
         <div className={s.content}>
             <ProfileInfo/>
-           <MyPosts postData={props.state.postData}/>
+           <MyPosts postData={state.postData}/>
         </div>
     )
 }

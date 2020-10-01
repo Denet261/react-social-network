@@ -1,4 +1,5 @@
 import React from 'react'
+import slaid from './slaid.jpg'
 
 
 
@@ -6,7 +7,7 @@ const ProfileInfo =()=>{
     return(
         <div>
             <div>
-                <img src='https://i.pinimg.com/originals/33/b8/69/33b869f90619e81763dbf1fccc896d8d.jpg'/>
+                <img src={slaid}/>
             </div>
     <div>
         ava + description
