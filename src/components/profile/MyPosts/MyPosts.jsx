@@ -1,9 +1,9 @@
-import React, { useState } from "react";
+import React from "react";
 import s from "./MyPosts.module.css";
 import Post from "./Post/Post";
 
 
-const MyPosts =({postData}) =>{
+const MyPosts =({postData, addPost}) =>{
 
 let postElements = postData
     .map( p =><Post massage={p.massage} like={p.like}/> )
@@ -13,28 +13,27 @@ let postElements = postData
 
 
 
-    const [text, setText] = useState('8')
-    let buttonClikc = () =>{
-      let text = textElement.current.value
-       setText(text);
-
-   }
-
-
-   // let buttonClikc =()=>{
-   //     let text = textElement.current.value
-   //     alert(text)
+   //  const [text, setText ] = useState('')
+   //  debugger
+   //  let buttonClikc = () =>{
+   //    let text = textElement.current.value
+   //     setText(text);
    // }
 
 
+   let saddPost =()=>{
+       debugger;
+       let text = textElement.current.value
+       addPost(text)
+   }
 
     return(
 <div>
     My posts
     <div>
-        <h1>{text}</h1>
+        {/*<h1>{text}</h1>*/}
         <textarea ref={textElement}></textarea>
-        <button onClick={buttonClikc}>Add post</button>
+        <button onClick={saddPost}>Add post</button>
     </div>
     <div className={s.posts}>
         {postElements}

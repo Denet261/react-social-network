@@ -14,11 +14,23 @@ let  state = {
     },
     postPage: {
         postData: [
-            {id: 1, massage: 'Даааа ', like: 1110,},
-            {id: 1, massage: 'Нет ', like: 0},
-            {id: 1, massage: 'Хз ', like: 10}
+            {id: 0, massage: 'Даааа ', like: 1110,},
+            {id: 2, massage: 'Нет ', like: 0},
+            {id: 3, massage: 'Хз ', like: 10}
         ]
     },
 }
+
+export let addPost =(postDataMassage)=>{
+    debugger;
+    let newPost ={
+        id:4,
+        massage:postDataMassage,
+        like: 5
+    };
+    state.postPage.postData.push(newPost);
+
+}
+
 
 export default state;
