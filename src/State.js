@@ -1,3 +1,5 @@
+import {rerenderEntireTre} from "./render";
+
 let  state = {
     dialogsPage: {
         dialogsData: [
@@ -29,7 +31,7 @@ export let addPost =(postDataMassage)=>{
         like: 5
     };
     state.postPage.postData.push(newPost);
-
+    rerenderEntireTre(state);
 }
 
 

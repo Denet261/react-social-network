@@ -25,6 +25,7 @@ let postElements = postData
        debugger;
        let text = textElement.current.value
        addPost(text)
+       textElement.current.value = ''
    }
 
     return(
