@@ -1,9 +1,10 @@
 .logo{
-    width: 120px;
+    width: 40px;
     height: 31px;
-    background: #ef5803;
+    background: rgba(239, 88, 3, 0);
     margin: 16px 28px 16px 0;
     float: left;
+    margin-top: 8px;
 }
 
 .site-layout-background {

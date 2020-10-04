@@ -3,7 +3,6 @@ import ReactDOM from 'react-dom';
 import 'antd/dist/antd.css';
 import './index.css';
 import { Layout, Menu, Breadcrumb } from 'antd';
-import { UserOutlined, LaptopOutlined, NotificationOutlined } from '@ant-design/icons';
 import s from './App.css';
 import Menui from "./components/navbar/nav";
 import Headeri from "./components/header/Header";
@@ -17,18 +16,12 @@ const { Header, Content, Footer, Sider } = Layout;
 
 
 
-// import Nav from "./components/navbar/nav";
-//
-// import Dialogs from "./components/Dialogs/Dialogs";
-
-
-
 const App = ({state, addPost}) => {
 
     return (
 
         <Layout>
-           <Headeri/>
+            <Headeri/>
             <Content style={{ padding: '0 35px'}}>
                 {/*<Breadcrumb style={{ margin: '16px 0' }}>*/}
                 {/*    <Breadcrumb.Item>Home</Breadcrumb.Item>*/}
@@ -59,30 +52,4 @@ const App = ({state, addPost}) => {
     );
 }
 
-
-
-
-// app stoc const App = ({state, addPost}) => {
-//
-//     return (
-//
-//         <div className='app-wrapper'>
-//             <Header/>
-//             <Nav/>
-//             <div className='app-content'>
-//                 <Route path='/profile' render={() =>
-//                     <Profile state={state.postPage} addPost={addPost}/>}/>
-//
-//                 <Route path='/dialogs'
-//                        render={() =>
-//                            <Dialogs state={state.dialogsPage}
-//                            />}/>
-//
-//             </div>
-//         </div>
-//
-//
-//     );
-// }
-//
 export default App;

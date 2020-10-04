@@ -1,7 +1,7 @@
 import React from 'react'
 import s from './Header.module.css'
 import {Layout, Menu} from "antd";
-
+import logo from './logo.png'
 const { Header } = Layout;
 
 
@@ -9,7 +9,7 @@ const Headeri = ()=>{
     return(
     <Header className="header">
         <div className='logo'>
-
+        <img className='logo' src={logo} alt='logo'/>
         </div>
         <Menu theme="dark" mode="horizontal" defaultSelectedKeys={['2']}>
             <Menu.Item key="1">nav 1</Menu.Item>
