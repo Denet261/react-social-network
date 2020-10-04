@@ -14,23 +14,32 @@ let  state = {
             {id: 3, massage: 'Да, да'}
         ],
     },
-    postPage: {
-        postData: [
+    profilePage: {
+        posts: [
             {id: 0, massage: 'Даааа ', like: 1110,},
             {id: 2, massage: 'Нет ', like: 0},
             {id: 3, massage: 'Хз ', like: 10}
-        ]
+        ],
+        newPostText:'323331'
+
     },
 }
-
-export let addPost =(postDataMassage)=>{
-    debugger;
+window.state = state
+export let addPost =()=>{
     let newPost ={
         id:4,
-        massage:postDataMassage,
+        massage:state.profilePage.newPostText,
         like: 5
     };
-    state.postPage.postData.push(newPost);
+    state.profilePage.posts.push(newPost);
+    state.profilePage.newPostText=('')
+    rerenderEntireTre(state);
+}
+
+export let updateNewPostText =(newText)=>{
+
+    state.profilePage.newPostText = newText
+
     rerenderEntireTre(state);
 }
 

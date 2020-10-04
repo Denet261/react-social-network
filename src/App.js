@@ -12,11 +12,12 @@ import Dialogs from "./components/Dialogs/Dialogs";
 
 
 
+
 const { Header, Content, Footer, Sider } = Layout;
 
 
 
-const App = ({state, addPost}) => {
+const App = ({state, addPost, updateNewPostText}) => {
 
     return (
 
@@ -34,7 +35,11 @@ const App = ({state, addPost}) => {
                         <Menui />
                     </Sider>
                     <Content style={{ padding: '0 24px', minHeight: 280 }}><Route path='/profile' render={() =>
-                        <Profile state={state.postPage} addPost={addPost}/>}/>
+                        <Profile profilePage={state.profilePage}
+                                 updateNewPostText={updateNewPostText}
+                                 addPost={addPost}/>}/>
+
+
 
                         <Route path='/dialogs'
                                render={() =>

@@ -15,37 +15,30 @@ import { Button } from "antd";
 
 
 
-const MyPosts =({postData, addPost}) =>{
+const MyPosts =({ posts, addPost,newPostText,updateNewPostText}) =>{
 
-let postElements = postData
+let postElements = posts
     .map( p =><Post massage={p.massage} like={p.like}/> )
 
 
     let textElement = React.createRef();
 
 
-
-   //  const [text, setText ] = useState('')
-   //  debugger
-   //  let buttonClikc = () =>{
-   //    let text = textElement.current.value
-   //     setText(text);
-   // }
-
-
    let saddPost =()=>{
-       debugger;
+       addPost()
+
+   }
+
+   let onPostChange =() =>{
        let text = textElement.current.value
-       addPost(text)
-       textElement.current.value = ''
+       updateNewPostText(text)
    }
 
     return(
 <div>
     My posts
     <div>
-        {/*<h1>{text}</h1>*/}
-        <textarea ref={textElement}></textarea><div>
+        <textarea onChange={onPostChange} ref={textElement} value={newPostText}/><div>
         <Button onClick={saddPost} type="primary" danger>Add post</Button>
     </div>
     </div>
