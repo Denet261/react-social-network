@@ -1,21 +1,38 @@
-.app-wrapper{
-    width: 1200px;
-    display:grid;
-    margin: auto;
-    grid-template-rows: 60px 1fr;
-    grid-template-columns: 2fr 10fr;
-    grid-template-areas:
-"h h"
-"n c"
-                       ;
-    /*grid-gap: 10px;*/
-
+.logo{
+    width: 120px;
+    height: 31px;
+    background: #ef5803;
+    margin: 16px 28px 16px 0;
+    float: left;
 }
 
-.app-content{
-    grid-area: c;
-    background-color: #d4be38;
+.site-layout-background {
+    background: #fff;
 }
+
+
+
+
+
+
+/*.app-wrapper{*/
+/*    width: 1200px;*/
+/*    display:grid;*/
+/*    margin: auto;*/
+/*    grid-template-rows: 60px 1fr;*/
+/*    grid-template-columns: 2fr 10fr;*/
+/*    grid-template-areas:*/
+/*"h h"*/
+/*"n c"*/
+/*                       ;*/
+/*    !*grid-gap: 10px;*!*/
+
+/*}*/
+
+/*.app-content{*/
+/*    grid-area: c;*/
+/*    background-color: #d4be38;*/
+/*}*/
 
 
 

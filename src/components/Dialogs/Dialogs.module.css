@@ -33,9 +33,13 @@ color: #282c34;
 }
 
 .massages{
- padding: 20px;
-    line-height:3.31;
+    line-height:7.41;
+    padding: 2px;
+
 }
 
 
-
+.massage{
+    padding: 20px;
+    background: #D9FFAD;
+}

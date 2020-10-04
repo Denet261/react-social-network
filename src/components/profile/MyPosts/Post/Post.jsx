@@ -9,7 +9,7 @@ const Post =(props) =>{
 
         <div className={s.item}>
             <img src={avaPost}/>
-            <div>
+            <div className={s.massage}>
                 Name:{props.massage}
                 </div>
 

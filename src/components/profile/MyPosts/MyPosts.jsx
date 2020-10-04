@@ -1,6 +1,18 @@
 import React from "react";
 import s from "./MyPosts.module.css";
 import Post from "./Post/Post";
+import "antd/dist/antd.css";
+import { Button } from "antd";
+
+
+
+
+
+
+
+
+
+
 
 
 const MyPosts =({postData, addPost}) =>{
@@ -33,8 +45,9 @@ let postElements = postData
     My posts
     <div>
         {/*<h1>{text}</h1>*/}
-        <textarea ref={textElement}></textarea>
-        <button onClick={saddPost}>Add post</button>
+        <textarea ref={textElement}></textarea><div>
+        <Button onClick={saddPost} type="primary" danger>Add post</Button>
+    </div>
     </div>
     <div className={s.posts}>
         {postElements}

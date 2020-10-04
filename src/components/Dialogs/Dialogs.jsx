@@ -22,9 +22,13 @@ const Dialogs =({state}) =>{
          <div className={s.dialogsitems}>
              {dialogsElement}
          </div>
-<div className={s.massages}>
-    {massageElement}
-</div>
+
+         <div className={s.massages}>
+             <div className={s.massage}>
+           {massageElement}
+
+             </div>
+         </div>
     </div>
 
 )
