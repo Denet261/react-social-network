@@ -1,4 +1,6 @@
-import {rerenderEntireTre} from "./render";
+let rerenderEntireTre = () =>{
+    console.log('state')
+}
 
 let  state = {
     dialogsPage: {
@@ -24,8 +26,10 @@ let  state = {
 
     },
 }
-window.state = state
-export let addPost =()=>{
+
+window.state = state;
+
+export const addPost =()=>{
     let newPost ={
         id:4,
         massage:state.profilePage.newPostText,
@@ -36,12 +40,17 @@ export let addPost =()=>{
     rerenderEntireTre(state);
 }
 
-export let updateNewPostText =(newText)=>{
+export const updateNewPostText =(newText)=>{
 
     state.profilePage.newPostText = newText
 
     rerenderEntireTre(state);
 }
 
+export let subScribe = (observer) => {
+    rerenderEntireTre = observer;
+
+
+}
 
 export default state;
