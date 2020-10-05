@@ -1,26 +1,26 @@
 import React from 'react';
 import './index.css';
-import state, {subScribe}from "./State";
+import store from "./State";
 import ReactDOM from 'react-dom';
 import App from './App';
-import {addPost} from "./State.js";
 import {BrowserRouter} from "react-router-dom";
-import {updateNewPostText} from "./State";
 
 
 
 let rerenderEntireTre = (state) => {
     ReactDOM.render(
         <BrowserRouter>
-            <App state={state} addPost={addPost} updateNewPostText={updateNewPostText}/>
+            <App state={store.getState()}
+                 addPost={store.addPost.bind(store)}
+                 updateNewPostText={store.updateNewPostText.bind(store)}/>
         </BrowserRouter>
         , document.getElementById('root'));
 
 }
 
-rerenderEntireTre(state);
+rerenderEntireTre(store.getState());
 
-subScribe(rerenderEntireTre);
+store.subScribe(rerenderEntireTre);
 
 
 
