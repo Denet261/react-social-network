@@ -44,7 +44,6 @@ let postElements = posts
     </div>
     <div className={s.posts}>
         {postElements}
-
     </div>
 </div>
 )
