@@ -17,7 +17,7 @@ const { Header, Content, Footer, Sider } = Layout;
 
 
 
-const App = ({state, addPost, updateNewPostText}) => {
+const App = ({state, dispatch, updateNewPostText}) => {
 
     return (
 
@@ -36,8 +36,7 @@ const App = ({state, addPost, updateNewPostText}) => {
                     </Sider>
                     <Content style={{ padding: '0 24px', minHeight: 280 }}><Route path='/profile' render={() =>
                         <Profile profilePage={state.profilePage}
-                                 updateNewPostText={updateNewPostText}
-                                 addPost={addPost}/>}/>
+                                 dispatch={dispatch}/>}/>
 
 
 

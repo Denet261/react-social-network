@@ -15,7 +15,7 @@ import { Button } from "antd";
 
 
 
-const MyPosts =({ posts, addPost,newPostText,updateNewPostText}) =>{
+const MyPosts =({ posts, dispatch,newPostText}) =>{
 
 let postElements = posts
     .map( p =><Post massage={p.massage} like={p.like}/> )
@@ -25,13 +25,15 @@ let postElements = posts
 
 
    let saddPost =()=>{
-       addPost()
+       dispatch({type:'ADD-POST'})
 
    }
 
    let onPostChange =() =>{
        let text = textElement.current.value
-       updateNewPostText(text)
+       let action = {type: 'UPDATE-NEW-POST-TEXT', newText: text}
+       dispatch(action)
+
    }
 
     return(
