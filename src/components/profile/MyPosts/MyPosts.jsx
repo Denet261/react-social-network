@@ -3,11 +3,7 @@ import s from "./MyPosts.module.css";
 import Post from "./Post/Post";
 import "antd/dist/antd.css";
 import { Button } from "antd";
-
-
-
-
-
+import {updateNewPostTextActionCreator, addPostActionCreator } from '../../../State'
 
 
 
@@ -25,13 +21,13 @@ let postElements = posts
 
 
    let saddPost =()=>{
-       dispatch({type:'ADD-POST'})
+       dispatch(addPostActionCreator())
 
    }
 
    let onPostChange =() =>{
        let text = textElement.current.value
-       let action = {type: 'UPDATE-NEW-POST-TEXT', newText: text}
+       let action = updateNewPostTextActionCreator(text)
        dispatch(action)
 
    }
