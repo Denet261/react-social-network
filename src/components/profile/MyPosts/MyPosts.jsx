@@ -21,13 +21,14 @@ let postElements = posts
 
 
    let saddPost =()=>{
-       dispatch(addPostActionCreator())
+       debugger
+       dispatch(addPostActionCreator({type: 'ADD-POST'}))
 
    }
 
    let onPostChange =() =>{
        let text = textElement.current.value
-       let action = updateNewPostTextActionCreator(text)
+       let action = {type:'UPDATE-NEW-POST-TEXT', newText:text}
        dispatch(action)
 
    }
