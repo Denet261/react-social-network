@@ -17,7 +17,7 @@ const { Header, Content, Footer, Sider } = Layout;
 
 
 
-const App = ({state, dispatch, updateNewPostText}) => {
+const App = ({state, dispatch,store, updateNewPostText}) => {
 
     return (
 
@@ -42,7 +42,7 @@ const App = ({state, dispatch, updateNewPostText}) => {
 
                         <Route path='/dialogs'
                                render={() =>
-                                   <Dialogs state={state.dialogsPage}
+                                   <Dialogs  store={store}
                                    />}/>
 
 

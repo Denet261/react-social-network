@@ -14,6 +14,9 @@ let store ={
                 {id: 2, massage: 'Пока'},
                 {id: 3, massage: 'Да, да'}
             ],
+            newMassageText:'323331'
+
+
         },
         profilePage: {
             posts: [
@@ -52,20 +55,30 @@ let store ={
              like: 5
          };
          this._state.profilePage.posts.push(newPost);
-         this._state.profilePage.newPostText=('')
+         this._state.profilePage.newPostText=''
          this._callSubscriber(this._state);
      } else if(action.type ==='UPDATE-NEW-POST-TEXT'){
          this._state.profilePage.newPostText = action.newText
          this._callSubscriber(this._state);
-     }
+     }else if(action.type === 'UPDATE-NEW-MESSAGE-BODY'){
+         this._state.dialogsPage.newMassageText = action.body
+         this._callSubscriber(this._state)
+     }else if(action.type === 'SEND_MESSAGE'){
+         let body = this._state.dialogsPage.newMassageText
+         this._state.dialogsPage.massageData.push({id:4, massage: body} )
+        this._callSubscriber(this._state)
+        
+    }
     }
 }
 
 export const addPostActionCreator = () => ({type:'ADD-POST'})
-
-
 export const updateNewPostTextActionCreator = (text) =>
     ({ type: 'UPDATE-NEW-POST-TEXT', newText: text})
+
+    export const sendMessageCteator = () => ({type:'SEND_MESSAGE'})
+export const updateNewMessageBodyCreator = (body) =>
+    ({ type: 'UPDATE-NEW-MESSAGE-BODY', body: body})
 
 
 
