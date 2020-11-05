@@ -13,7 +13,7 @@ let state = store.getState().dialogsPage
     let massageElement = state.massageData.map( m =><Massages massage={m.massage}/>)
 
     let dialogsElement = state.dialogsData.map(d =><DialogsItem id={d.id} name={d.name}/>)
-    let newMessageBody = state.newMessageBody
+    let newMessageBody = state.newMassageText
 
  let onSendMessageClikc = () =>{
     store.dispatch (sendMessageCteator())
@@ -23,6 +23,7 @@ let state = store.getState().dialogsPage
  let onNewMessageChange = (e) =>{
     let body = e.target.value
     store.dispatch (updateNewMessageBodyCreator(body))
+    
 }
 
 

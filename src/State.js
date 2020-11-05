@@ -14,7 +14,7 @@ let store ={
                 {id: 2, massage: 'Пока'},
                 {id: 3, massage: 'Да, да'}
             ],
-            newMassageText:'323331'
+            newMassageText:''
 
 
         },
@@ -24,7 +24,7 @@ let store ={
                 {id: 2, massage: 'Нет ', like: 0},
                 {id: 3, massage: 'Хз ', like: 10}
             ],
-            newPostText:'323331'
+            newPostText:''
 
         },
     },
@@ -65,6 +65,7 @@ let store ={
          this._callSubscriber(this._state)
      }else if(action.type === 'SEND_MESSAGE'){
          let body = this._state.dialogsPage.newMassageText
+         this._state.dialogsPage.newMassageText = ''
          this._state.dialogsPage.massageData.push({id:4, massage: body} )
         this._callSubscriber(this._state)
         
